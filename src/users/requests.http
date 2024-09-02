@@ -1,4 +1,4 @@
-# Create a new User
+### Create a new User
 POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
@@ -6,6 +6,24 @@ Content-Type: application/json
     "email":"gihan@gmail.com",
     "password":"123456"
 }
+
+### Sign in User
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email":"gihan@gmail.com",
+    "password":"123456"
+}
+
+
+###Get current signed in user
+
+GET http://localhost:3000/auth/whoami
+
+###SignOut
+
+POST http://localhost:3000/auth/signout
 
 ###Find with ID
 
@@ -24,3 +42,11 @@ content-type: application/json
 {
   "password": "aaaaa"
 }
+
+
+### Color Set
+
+GET http://localhost:3000/auth/colors/red
+
+### color Get
+GET http://localhost:3000/auth/colors
